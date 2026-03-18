@@ -36,7 +36,7 @@ milestones = {
 
 with st.sidebar:
     st.title("Settings")
-    theme = st.selectbox("Appearance", ["Dark Mode", "Light Mode"])
+    theme = st.selectbox("Appearance", ["Light Mode", "Dark Mode"])
     dark = True if theme == "Dark Mode" else False
     st.divider()
     start_date = confirmed.index.min().to_pydatetime()
