@@ -53,7 +53,7 @@ theme_name = "plotly_dark" if dark else "plotly_white"
 
 st.markdown(f"""
     <style>
-    header[data-testid="stHeader"] {{ visibility: hidden; height: 0px; }}
+    header[data-testid="stHeader"] {{ background-color: rgba(0,0,0,0) !important; border: none !important; }}
     .stApp {{ background-color: {background_color} !important; }}
     [data-testid="stSidebar"] {{ background-color: {side_color} !important; border-right: 1px solid {grid_color}; }}
     .block-container {{ padding: 0rem 3rem !important; }}
@@ -127,13 +127,25 @@ st.markdown(f"""
         background-color: {grid_color} !important;
     }}
 
+    div[data-baseweb="calendar"] [aria-selected="true"],
+    div[data-baseweb="calendar"] [aria-selected="true"] > div {{
+        background-color: #ff4b4b !important;
+        color: #ffffff !important;
+    }}
+
     .stMultiSelect [data-baseweb="tag"] {{ 
         background-color: {grid_color} !important; 
     }}
     .stMultiSelect [data-baseweb="tag"] span {{
         color: {text_color} !important;
     }}
-    
+
+    button[data-testid="stSidebarCollapseButton"] svg,
+    button[kind="headerNoPadding"] svg {{
+        fill: {text_color} !important;
+        color: {text_color} !important;
+    }}
+
     input[type="color"] {{ 
         height: 25px !important; 
     }}
