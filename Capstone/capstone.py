@@ -53,15 +53,27 @@ theme_name = "plotly_dark" if dark else "plotly_white"
 
 st.markdown(f"""
     <style>
-    header[data-testid="stHeader"] {{ background-color: rgba(0,0,0,0) !important; border: none !important; }}
-    .stApp {{ background-color: {background_color} !important; }}
-    [data-testid="stSidebar"] {{ background-color: {side_color} !important; border-right: 1px solid {grid_color}; }}
-    .block-container {{ padding: 0rem 3rem !important; }}
+    header[data-testid="stHeader"] {{
+            background-color: rgba(0,0,0,0) !important;
+    }}
+    .stApp {{
+            background-color: {background_color} !important;
+    }}
+    [data-testid="stSidebar"] {{
+        background-color: {side_color} !important;
+        border-right: 1px solid {grid_color};
+    }}
+    .block-container {{
+        padding: 0rem 3rem !important;
+    }}
     
     .stApp h1, .stApp h2, .stApp h3, .stApp p, .stApp label, .stApp li {{ 
         color: {text_color} !important; 
     }}
-    h1 {{ font-weight: 700; margin-top: 10px !important; }}
+    h1 {{
+        font-weight: 700;
+        margin-top: 10px !important;
+    }}
     
     div[data-baseweb="select"] > div,
     div[data-testid="stDateInput"] > div {{ 
